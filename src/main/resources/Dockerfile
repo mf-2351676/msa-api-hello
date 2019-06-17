@@ -7,6 +7,7 @@ ADD ${JAR_FILE} app.jar
 #暴露端口
 EXPOSE 58080
 #设置镜像制作过程中需要执行的命令
+RUN echo ${JAR_FILE}
 #RUN ln -s /opt/jdk1.8.0_144 /opt/jdk
 #RUN sh -c "touch /app.jar"
 #设置环境变量
