@@ -1,22 +1,22 @@
 FROM java:8
 
-VOLUME /home
+VOLUME /tmp
 
-WORKDIR /home/model
+WORKDIR /code
 
 # Prepare by downloading dependencies
-ADD pom.xml /home/model/pom.xml
+ADD pom.xml /code/pom.xml
 #RUN ["mvn", "dependency:resolve"]
 #RUN ["mvn", "verify"]
 
 # Adding source, compile and package into a fat jar
-ADD src /home/model/src
+ADD src /code/src
 RUN ["mvn", "clean", "install"]
 
-RUN ["ls", "/home/model/target"]
+RUN ["ls", "/code/target"]
 RUN ["pwd"]
-RUN ["ls", "-ltrh", "/home/model/target/${JAR_FILE}.jar"]
+RUN ["ls", "-ltrh", "/code/target/${JAR_FILE}.jar"]
 
-EXPOSE 58080
+EXPOSE 8080
 
-ENTRYPOINT [ "java", "-jar", "/home/model/target/${JAR_FILE}.jar" ]
+ENTRYPOINT [ "java", "-jar", "/code/target/${JAR_FILE}.jar" ]
