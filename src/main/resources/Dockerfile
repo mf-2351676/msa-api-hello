@@ -7,12 +7,12 @@ ADD ${JAR_FILE} app.jar
 #暴露端口
 EXPOSE 58080
 #设置镜像制作过程中需要执行的命令
-RUN echo ${JAR_FILE}
 #RUN ln -s /opt/jdk1.8.0_144 /opt/jdk
+RUN ln -s /app.jar/${JAR_FILE} ./app.jar
 #RUN sh -c "touch /app.jar"
 #设置环境变量
 #ENV JAVA_HOME /opt/jdk
 #ENV PATH $JAVA_HOME/bin:$PATH
 #设置容器启动时需要执行的命令
-CMD java -jar /app.jar/${JAR_FILE}
+CMD java -jar app.jar
 #ENTRYPOINT ["java","-jar","/app.jar"]
