@@ -3,7 +3,7 @@ FROM java
 #设置维护者信息
 MAINTAINER "MF"<mf@xx.com>
 #设置需要添加到容器中的文件 @project.build.finalName@.jar
-ADD ${JAR_FILE} app.jar
+ADD ${JAR_FILE} /app.jar
 #暴露端口
 EXPOSE 58080
 #设置镜像制作过程中需要执行的命令
