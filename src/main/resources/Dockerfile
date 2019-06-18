@@ -8,8 +8,8 @@ ADD ${JAR_FILE} /app.jar
 EXPOSE 58080
 #设置镜像制作过程中需要执行的命令
 #RUN ln -s /opt/jdk1.8.0_144 /opt/jdk
-RUN ln -s /app.jar/${JAR_FILE} ./app.jar
-#RUN sh -c "touch /app.jar"
+#RUN ln -s /app.jar/${JAR_FILE} ./app.jar
+RUN bash -c "touch /app.jar"
 #设置环境变量
 #ENV JAVA_HOME /opt/jdk
 #ENV PATH $JAVA_HOME/bin:$PATH
