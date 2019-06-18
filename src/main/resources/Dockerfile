@@ -15,4 +15,4 @@ RUN bash -c "touch /app.jar"
 #ENV PATH $JAVA_HOME/bin:$PATH
 #设置容器启动时需要执行的命令
 #CMD java -jar app.jar
-ENTRYPOINT ["java","-jar","/app.jar"]
+ENTRYPOINT ["java","-jar","app.jar"]
