@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @Date: 2019/5/27 13:55
  * @Version 1.0
  */
+
 @RestController
 @SpringBootApplication
 public class Application {
