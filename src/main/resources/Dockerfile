@@ -13,5 +13,5 @@ EXPOSE 58080
 #ENV JAVA_HOME /opt/jdk
 #ENV PATH $JAVA_HOME/bin:$PATH
 #设置容器启动时需要执行的命令
-CMD java -jar app.jar
+#CMD java -jar app.jar
 #ENTRYPOINT ["java","-jar","/app.jar"]
