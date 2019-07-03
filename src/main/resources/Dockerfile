@@ -9,8 +9,7 @@ EXPOSE 58080
 #设置镜像制作过程中需要执行的命令
 #RUN bash -c "touch /app.jar"
 #设置环境变量
-#ENV JAVA_HOME /opt/jdk
+#ENV JAVA_HOME /opt/jdks
 #ENV PATH $JAVA_HOME/bin:$PATH
 #设置容器启动时需要执行的命令
 CMD java -jar app.jar
-#ENTRYPOINT ["java","-jar","/app.jar"]
