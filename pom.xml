@@ -51,7 +51,7 @@
                     <baseImage>java</baseImage>
 
                     <!--指定远程 docker api地址-->
-                    <dockerHost>http://192.168.138.202:2375</dockerHost>
+                    <dockerHost>http://192.168.138.254:2375</dockerHost>
                     <!--
                         dockerDirectory 指定docker文件所在目录
                         ${project.build.outputDirectory}读取经maven过滤后的docker文件，
